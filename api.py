@@ -21,10 +21,10 @@ def main():
     except:
         sys.exit("Usage: requires existing text file.")
     cases = lines.splitlines()
-    download_pdfs(*cases)
+    download_pdfs(cases)
 
 
-def download_pdfs(*args):
+def download_pdfs(args):
     '''
     Downloads as PDF the first result in any number of
     case queries. Tracks cases that did not yield results
