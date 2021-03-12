@@ -20,7 +20,7 @@ def main():
             lines = f.read()
     except:
         sys.exit("Usage: requires existing text file.")
-    cases = lines.splitlines()[:4]
+    cases = lines.splitlines()
     download_pdfs(*cases)
 
 
