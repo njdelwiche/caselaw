@@ -65,9 +65,7 @@ def clean(text):
     '''
 
     pdf_name = re.sub(r'[\\\\/*?:"<>\'’.,|;]', "", text)
-    if len(pdf_name) > 225:
-        pdf_name = pdf_name[:225]
-    return pdf_name
+    return pdf_name if len(pdf_name) > 225 else pdf_name[:225]
 
 
 if __name__ == "__main__":
